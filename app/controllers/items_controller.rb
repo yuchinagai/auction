@@ -20,4 +20,14 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :price, :seller, :description, :email, :image_url)
   end
+
+  def edit
+    @item = Item.find(params[:id])
+  end
+
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    redirect_to @item
+  end 
 end
