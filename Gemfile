@@ -66,3 +66,5 @@ group :production do
   gem 'pg', '~> 0.18'  # バージョンを指定しないとうまく動かない
   gem 'rails_12factor'
 end
+
+gem 'rb-readline'
